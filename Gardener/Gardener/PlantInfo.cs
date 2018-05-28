@@ -7,26 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Gardener
 {
     public partial class PlantInfo : Form
     {
-     
         public PlantInfo()
         {
             InitializeComponent();
-            LoadPlantInfo();
+            gatherinfo();
         }
-        private void LoadPlantInfo()
+        private void gatherinfo()
         {
-            string name, species;
-            name = ListPlants.passthrough[0].ToString();
+            string name = ListPlants.passthrough[0].ToString(),
             species = ListPlants.passthrough[1].ToString();
-
+            
             lbltest1.Text = name;
-            label2.Text = "(" + species + ")";
+            label2.Text = species;
         }
-
     }
 }

@@ -53,12 +53,9 @@ namespace Gardener
             passthrough = selected.Split('-');             
 
             PlantInfo plantInfo = new PlantInfo();
+            plantInfo.gatherinfo(passthrough[0], passthrough[1]);
             plantInfo.Show();
-
-        
-
         }
-       
     }
 }
         

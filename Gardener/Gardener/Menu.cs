@@ -28,5 +28,11 @@ namespace Gardener
             ListPlants listPlants = new ListPlants();
             listPlants.Show();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Users.register register = new Users.register();
+            register.Show();
+        }
     }
 }

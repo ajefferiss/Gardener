@@ -30,6 +30,7 @@
         {
             this.btnAddPlant = new System.Windows.Forms.Button();
             this.btnListPlants = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddPlant
@@ -52,11 +53,22 @@
             this.btnListPlants.UseVisualStyleBackColor = true;
             this.btnListPlants.Click += new System.EventHandler(this.btnListPlants_Click);
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(12, 70);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(117, 23);
+            this.btnRegister.TabIndex = 2;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnListPlants);
             this.Controls.Add(this.btnAddPlant);
             this.Name = "Menu";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btnAddPlant;
         private System.Windows.Forms.Button btnListPlants;
+        private System.Windows.Forms.Button btnRegister;
     }
 }
 

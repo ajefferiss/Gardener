@@ -13,6 +13,8 @@ namespace Gardener
 {
     public partial class ListPlants : Form
     {
+        public static string[] passthrough;
+
         public ListPlants()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace Gardener
 
                 SQLiteDataReader reader = command.ExecuteReader();
 
-                while(reader.Read())
+                while (reader.Read())
                 {
                     showlist((IDataRecord)reader);
                 }
@@ -48,19 +50,15 @@ namespace Gardener
         {
             //strings the selected listbox items name 
             string selected = listBox1.SelectedItem.ToString();
-            //splits the selected name to 
-            string[] info = selected.Split('-');
-       
-        
+            passthrough = selected.Split('-');             
 
             PlantInfo plantInfo = new PlantInfo();
             plantInfo.Show();
 
-            //outputs to check working
-            string name = info[0], species = info[1];
-            lblTest.Text = name;
-            lblTest2.Text = species;
-        }
+        
 
+        }
+       
     }
 }
+        
